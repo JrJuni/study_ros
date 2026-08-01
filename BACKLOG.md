@@ -85,6 +85,18 @@ codex sandbox -- /usr/bin/true
 - 위 버전 조합은 학생 컴퓨터 사양을 확인한 뒤 최종 확정한다는 주의사항
 - Codex `bwrap`/AppArmor 오류의 원인과 해결 과정
 
+## 현재 환경 점검 진행
+
+- [x] Ubuntu 24.04.4 LTS 및 x86_64 확인
+- [x] AMD Ryzen 5 7500F, 6코어 12스레드 확인
+- [x] RTX 4070 Ti SUPER, VRAM 약 16GB, 드라이버 595.84 확인
+- [x] RAM 약 32GB, Swap 8GB 확인
+- [x] 루트 저장 공간 450GB 여유 확인
+- [x] Python 3.12.3 확인
+- [ ] 기존 ROS 2 설치 여부 확인
+- [ ] Isaac Sim 공식 호환성 검사 실행
+- [ ] 점검 결과에 따라 ROS 2 Jazzy와 Isaac Sim 설치 방식 확정
+
 ## 다음 세션 재개 방법
 
 새 Codex 세션에서 저장소를 연 뒤 다음과 같이 요청한다.
