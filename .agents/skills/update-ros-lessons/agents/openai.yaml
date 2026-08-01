@@ -1,0 +1,4 @@
+interface:
+  display_name: "ROS 학습자료 정리"
+  short_description: "ROS와 Isaac Sim 학습 내용을 날짜별 교재로 정리"
+  default_prompt: "Use $update-ros-lessons to organize today’s ROS and Isaac Sim study into a dated lesson document."
