@@ -81,8 +81,9 @@ codex sandbox -- /usr/bin/true
   - Ubuntu 24.04
   - ROS 2 Jazzy
   - NVIDIA Isaac Sim 6.0.1
-  - Python 3.12
-- 위 버전 조합은 학생 컴퓨터 사양을 확인한 뒤 최종 확정한다는 주의사항
+- Python 3.12
+- Isaac Sim 4.5, 5.0, 6.0 계열의 운영체제·ROS 2·Python·GPU 요구사항 비교
+- 현재 환경에서는 Isaac Sim 6.0 계열을 우선 시험하고 호환성 검사 뒤 확정한다는 주의사항
 - Codex `bwrap`/AppArmor 오류의 원인과 해결 과정
 
 ## 현재 환경 점검 진행
@@ -93,9 +94,30 @@ codex sandbox -- /usr/bin/true
 - [x] RAM 약 32GB, Swap 8GB 확인
 - [x] 루트 저장 공간 450GB 여유 확인
 - [x] Python 3.12.3 확인
-- [ ] 기존 ROS 2 설치 여부 확인
+- [x] ROS 2 실행 파일 `/opt/ros/jazzy/bin/ros2` 확인
+- [x] `ROS_DISTRO=jazzy` 및 설치 경로 `/opt/ros/jazzy` 확인
+- [x] Isaac Sim 4.5, 5.0, 6.0 계열의 공식 요구사항 비교
+- [ ] ROS 2 talker/listener 기본 통신 실습
 - [ ] Isaac Sim 공식 호환성 검사 실행
-- [ ] 점검 결과에 따라 ROS 2 Jazzy와 Isaac Sim 설치 방식 확정
+- [ ] 호환성 검사 결과에 따라 Isaac Sim 6.0 계열 설치 여부 확정
+
+## Isaac Sim 버전 선택 기록
+
+- 우선 후보: Isaac Sim 6.0 계열
+  - Ubuntu 24.04와 ROS 2 Jazzy가 공식 권장 조합이다.
+  - Python 3.12 기반 ROS 라이브러리를 사용하므로 현재 환경과 잘 맞는다.
+  - RTX 4070 Ti SUPER는 공식 최소 GPU인 RTX 4080보다 낮으므로 설치 전
+    Compatibility Checker를 실행하고 단순한 1관절 장면부터 시험한다.
+- 제외 후보: Isaac Sim 5.0
+  - Ubuntu 24.04와 Jazzy는 지원하지만 최소 GPU 요구사항이 6.0과 같은
+    RTX 4080이어서 GPU 부담을 줄이는 대안이 아니다.
+  - Isaac Sim 내부 Python 3.11과 시스템 Python 3.12의 차이 때문에 사용자 정의
+    ROS 패키지를 연동할 때 추가 작업이 필요하다.
+- 조건부 대안: Isaac Sim 4.5
+  - 최소 GPU가 RTX 3070 8GB라서 하드웨어 요구사항은 더 낮다.
+  - Ubuntu 24.04와 Jazzy는 공식 조합이 아니며 Ubuntu 22.04와 ROS 2 Humble이
+    권장된다. 필요할 경우 현재 환경을 바꾸지 않고 별도 운영체제나 별도 컴퓨터에서
+    검토한다.
 
 ## 다음 세션 재개 방법
 
