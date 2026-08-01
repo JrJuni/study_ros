@@ -43,8 +43,8 @@
 ## 완료된 작업
 
 - GitHub 저장소 `JrJuni/study_ros`를 `/home/junibecky/study_ros`에 복제했다.
-- 원격 저장소는 `main` 브랜치이며 최초 커밋 상태다.
-- 프로젝트 로컬 스킬 골격을 다음 위치에 초기화했다.
+- 원격 저장소의 기본 브랜치는 `main`이며 첫 학습자료를 병합했다.
+- 프로젝트 로컬 학습자료 스킬을 다음 위치에 완성했다.
   - `.agents/skills/update-ros-lessons/`
 - `docs/` 디렉터리를 만들었다.
 - Codex Linux 샌드박스 오류의 원인을 진단했다.
@@ -101,5 +101,5 @@ cd /home/junibecky/study_ros
 git status --short --branch
 ```
 
-`.agents/skills/update-ros-lessons/`는 초기화 도구가 만든 미완성 골격이므로
-삭제하지 말고 내용을 완성해야 한다.
+이 저장소는 개인 학습 노트이므로 기본적으로 `main`에서 직접 작업하고 푸시한다.
+별도 브랜치와 Pull Request는 사용자가 명시적으로 요청할 때만 사용한다.
