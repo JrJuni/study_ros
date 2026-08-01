@@ -97,7 +97,8 @@ codex sandbox -- /usr/bin/true
 - [x] ROS 2 실행 파일 `/opt/ros/jazzy/bin/ros2` 확인
 - [x] `ROS_DISTRO=jazzy` 및 설치 경로 `/opt/ros/jazzy` 확인
 - [x] Isaac Sim 4.5, 5.0, 6.0 계열의 공식 요구사항 비교
-- [ ] ROS 2 talker/listener 기본 통신 실습
+- [x] ROS 2 talker/listener 기본 통신 실습
+- [ ] 실행 중인 노드와 토픽을 ROS 2 CLI로 관찰하는 실습
 - [ ] Isaac Sim 공식 호환성 검사 실행
 - [ ] 호환성 검사 결과에 따라 Isaac Sim 6.0 계열 설치 여부 확정
 
